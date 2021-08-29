@@ -1,0 +1,31 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/teatime
+    username: postgres
+    password: 123
+    driverClassName: org.postgresql.Driver
+  mail:
+    host: smtp.yandex.ru
+    username: bookshelfapp@ya.ru
+    password: javaspring
+    port: 465
+    protocol: smtps
+    debug: true
+
+  session:
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
+
+  security:
+     basic:
+       enabled: false
+
+  profiles:
+    active: dev
